@@ -1,0 +1,113 @@
+/* src/Pages/Signup.css */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background-color: #0D1810; /* Darker background color */
+}
+
+.signup-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../../public/images/image5.png');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.4) contrast(1.2); /* Darken the image */
+    z-index: 1;
+}
+
+/* Dark overlay */
+.signup-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Darker overlay */
+    z-index: 1;
+}
+
+.signup-box {
+    position: relative;
+    background-color: rgba(30, 30, 30, 0.8); /* Darker glass effect */
+    border-radius: 15px;
+    padding: 40px;
+    max-width: 400px;
+    width: 100%;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    z-index: 2;
+}
+
+.glass-effect {
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.signup-box h2 {
+    margin-bottom: 20px;
+    color: #e0e0e0; /* Light grey color for better contrast */
+    font-family: 'Cinzel', serif;
+}
+
+.signup-box form {
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-box input {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #e0e0e0;
+}
+
+.signup-box input::placeholder {
+    color: #a0a0a0;
+}
+
+.signup-box button {
+    padding: 12px;
+    background-color: #51B26A; /* Adjusted to match the navbar button color */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Cinzel', serif;
+    transition: background-color 0.3s ease;
+}
+
+.signup-box button:hover {
+    background-color: #3d8a51;
+}
+
+.signup-box p {
+    margin-top: 20px;
+    color: #e0e0e0;
+    font-family: 'Cinzel', serif;
+}
+
+.signup-box p a {
+    color: #51B26A; /* Adjusted link color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.signup-box p a:hover {
+    color: #3d8a51;
+}

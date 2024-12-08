@@ -1,0 +1,282 @@
+/* Import the Cinzel font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+
+/* Global styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cinzel', serif;
+    background-color: #162718; /* Slightly darker background color */
+    color: #f0f0f0; /* Default text color for readability */
+}
+
+/* Navbar styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background-color: #2A3B20; /* Navbar background */
+}
+
+/* Header and Hero Section */
+.header, .hero-section {
+    background-color: #162718;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-top: 80px;
+    box-sizing: border-box;
+}
+
+.overlay, .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../../public/images/image5.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.7;
+    z-index: 1;
+    filter: brightness(0.7);
+}
+
+.content, .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    background-color: rgba(29, 48, 31, 0.6);
+    border-radius: 10px;
+    padding: 50px;
+}
+
+.content h1, .hero-content h2 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #f0f0f0;
+}
+
+.content p, .hero-content p {
+    font-size: 20px;
+    color: #e0e0e0;
+    margin-bottom: 40px;
+}
+
+/* Button styles */
+.btn, .cta-btn {
+    background-color: #C1BD61;
+    color: #2A3B20;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover, .cta-btn:hover {
+    background-color: #D2B447;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Section styles */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section.light {
+    background-color: #1E3022;
+    color: #f0f0f0;
+}
+
+.section.dark {
+    background-color: #162718;
+    color: #e0e0e0;
+}
+
+.section h2 {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* Card styles */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #2A3B20;
+    color: #f0f0f0;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 250px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card h3 {
+    font-size: 24px;
+    margin: 16px;
+    font-weight: 700;
+}
+
+.card p {
+    font-size: 16px;
+    margin: 0 16px 16px;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Feature styles */
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.feature {
+    background-color: #1E3022;
+    color: #f0f0f0;
+    border-radius: 10px;
+    padding: 20px;
+    width: 200px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.feature img {
+    width: 100%;
+    height: 100px;
+    border-radius: 5px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.feature h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.feature p {
+    font-size: 16px;
+}
+
+.feature:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer styles */
+.footer {
+    padding: 40px 20px;
+    background-color: #2A3B20;
+    color: #f0f0f0;
+    text-align: center;
+}
+
+.footer h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.footer p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+/* Add these styles to your existing CSS */
+
+.resources-container {
+    margin-top: 15px;
+    max-height: 200px;
+    overflow-y: auto;
+    padding-right: 10px;
+  }
+  
+  .resource-category {
+    margin-bottom: 15px;
+  }
+  
+  .resource-category h4 {
+    color: #6BC884;
+    margin: 0 0 8px 0;
+    font-size: 1rem;
+    border-bottom: 1px solid #51B26A;
+    padding-bottom: 5px;
+  }
+  
+  .resource-category ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .resource-category ul li {
+    color: #e0e0e0;
+    padding: 5px 0;
+    font-size: 0.9rem;
+    border-bottom: 1px solid rgba(81, 178, 106, 0.2);
+  }
+  
+  .resource-category ul li:last-child {
+    border-bottom: none;
+  }
+  
+  .custom-popup {
+    max-width: 300px;
+  }
+  
+  /* Scrollbar styling */
+  .resources-container::-webkit-scrollbar {
+    width: 6px;
+  }
+  
+  .resources-container::-webkit-scrollbar-track {
+    background: #1D301F;
+  }
+  
+  .resources-container::-webkit-scrollbar-thumb {
+    background: #51B26A;
+    border-radius: 3px;
+  }
+  
+  .resources-container::-webkit-scrollbar-thumb:hover {
+    background: #6BC884;
+  }
+  
+  /* Add these to your existing media queries */
+  @media (max-width: 768px) {
+    .resource-category h4 {
+      font-size: 0.9rem;
+    }
+  
+    .resource-category ul li {
+      font-size: 0.8rem;
+    }
+  }

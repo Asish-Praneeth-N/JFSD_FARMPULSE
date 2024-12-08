@@ -1,0 +1,159 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.welcome-message {
+    margin: 10px 0;
+}
+
+.search-bar {
+    padding: 10px;
+    width: 80%;
+    margin-top: 10px;
+}
+
+.banner {
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.features {
+    padding: 20px;
+    background-color: white;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.features h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.feature-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 10px 0;
+    text-align: center;
+    background-color: #fafafa;
+}
+
+.feature-card h3 {
+    color: #4CAF50;
+}
+
+.feature-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.feature-link:hover {
+    background-color: #45a049;
+}
+
+.call-to-action {
+    text-align: center;
+    padding: 20px;
+}
+/* Chatbot Section */
+.chatbot-section {
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #e0ffe1, #d0f2ff);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 800px;
+    transition: transform 0.3s ease, background 0.5s ease;
+  }
+  
+  .chatbot-section:hover {
+    transform: scale(1.02);
+    background: linear-gradient(135deg, #d0f2ff, #ffe0f7);
+  }
+  
+  .chatbot-section h2 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .chatbot-section p {
+    font-size: 1rem;
+    color: #34495e;
+    margin-bottom: 20px;
+  }
+  
+  .chatbot-section button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .chatbot-section button:hover {
+    background-color: #45a049;
+    transform: translateY(-3px);
+  }
+  
+  .chatbot-section button:active {
+    transform: translateY(0);
+    background-color: #3e8e41;
+  }
+  
+  
+.call-to-action button {
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.call-to-action button:hover {
+    background-color: #45a049;
+}
+
+.footer-links {
+    text-align: center;
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+}
