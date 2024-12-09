@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './Signup.css'; // Separate CSS for signup
+import config from '../config';
 
 const Signup = () => {
   const [formData, setFormData] = useState({
@@ -29,7 +30,7 @@ const Signup = () => {
     setSuccess('');
 
     try {
-      const response = await axios.post('http://localhost:1010/api/auth/register', formData);
+      const response = await axios.post(`${config.baseURL}/api/auth/register`, formData);
 
       if (response.status === 200) {
         setSuccess('Signup successful! Redirecting to login...');

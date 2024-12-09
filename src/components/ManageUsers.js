@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./ManageUsers.css";
+import config from "../config";
 
 const ManageUsers = () => {
   const [users, setUsers] = useState([]);
@@ -17,7 +18,7 @@ const ManageUsers = () => {
 
   const fetchUsers = async () => {
     try {
-      const response = await axios.get("http://localhost:1010/api/admin/get-all-users");
+      const response = await axios.get(`${config.baseURL}/api/admin/get-all-users`);
       // Ensure to log the response structure and access the data accordingly
       setUsers(response.data.ourUsersList || []); // Adjust this according to the actual API response structure
     } catch (error) {
@@ -28,7 +29,7 @@ const ManageUsers = () => {
   const handleDelete = async (userId) => {
     if (window.confirm("Are you sure you want to delete this user?")) {
       try {
-        await axios.delete(`http://localhost:1010/api/admin/delete/${userId}`);
+        await axios.delete(`${config.baseURL}/api/admin/delete/${userId}`);
         fetchUsers();
       } catch (error) {
         console.error("Error deleting user", error);
@@ -53,10 +54,10 @@ const ManageUsers = () => {
     e.preventDefault();
     try {
       if (editUser) {
-        await axios.put(`http://localhost:1010/api/admin/update/${editUser.id}`, formData);
+        await axios.put(`${config.baseURL}/api/admin/update/${editUser.id}`, formData);
       } else {
         // Handle Add User if needed
-        await axios.post(`http://localhost:1010/api/auth/register`, formData); // Assuming you have an endpoint to add users
+        await axios.post(`${config.baseURL}/api/auth/register`, formData); // Assuming you have an endpoint to add users
       }
       fetchUsers();
       setEditUser(null);

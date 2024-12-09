@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./ManageEvents.css"; // Optional CSS file for styling
+import config from "../config";
 
 const ManageEvents = () => {
     const [events, setEvents] = useState([]);
@@ -20,7 +21,7 @@ const ManageEvents = () => {
             const token = localStorage.getItem('token'); // Get the token from localStorage
             console.log(token);
             
-            const response = await axios.get("http://localhost:1010/api/admin/events", {
+            const response = await axios.get(`${config.baseURL}/api/admin/events`, {
                 headers: {
                     Authorization: `Bearer ${token}`, // Add the token in the Authorization header
                 },
@@ -52,7 +53,7 @@ const ManageEvents = () => {
     
         try {
             const token = localStorage.getItem('authToken'); // Get the token from localStorage
-            await axios.post("http://localhost:1010/api/admin/events", data, {
+            await axios.post(`${config.baseURL}/api/admin/events`, data, {
                 headers: {
                     "Content-Type": "multipart/form-data",
                     Authorization: `Bearer ${token}`, // Add the token in the Authorization header
@@ -78,7 +79,7 @@ const ManageEvents = () => {
     const handleDelete = async (id) => {
         try {
             const token = localStorage.getItem('authToken'); // Get the token from localStorage
-            await axios.delete(`http://localhost:1010/api/admin/events/${id}`, {
+            await axios.delete(`${config.baseURL}/api/admin/events/${id}`, {
                 headers: {
                     Authorization: `Bearer ${token}`, // Add the token in the Authorization header
                 },
